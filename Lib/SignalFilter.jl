@@ -1,0 +1,3 @@
+module SignalFilter
+
+end  # module

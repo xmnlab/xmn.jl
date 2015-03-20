@@ -1,0 +1,7 @@
+NIDAQ
+DSP
+DataFrames
+DataArrays
+https://github.com/JuliaDB/DBI.jl
+https://github.com/iamed2/PostgreSQL.jl
+IniFile
