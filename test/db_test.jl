@@ -1,7 +1,7 @@
-import CONN
+import DB
 
 function test1()
-    conn = CONN.connect("/home/xmn/dev/julia/xmn.jl/test/conn.ini")
+    conn = DB.connect("/home/xmn/dev/julia/xmn.jl/test/conn.ini")
 
     """
     stmt = prepare(
@@ -17,15 +17,15 @@ function test1()
         "INSERT INTO client1.client (id, name) VALUES (DEFAULT, '%s');", name
     )
 
-    CONN.run(conn, sql)
+    DB.run(conn, sql)
 
-    result = CONN.execute(
+    result = DB.execute(
         conn, "select id::int, name::character varying from client1.client"
     )
 
     print(result)
 
-    CONN.disconnect(conn)
+    DB.disconnect(conn)
 end
 
 

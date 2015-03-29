@@ -1,4 +1,4 @@
-module CONN
+module DB
     ##export connect,  disconnect
 
     import Base
@@ -9,6 +9,7 @@ module CONN
 
     """
     CONNECTION FUNCTION
+
     """
     function connect(
         file_ini_name::String, connection_name::String="default"
@@ -89,4 +90,4 @@ module CONN
         return DBI.disconnect(conn)
     end
 
-end  # CONN
+end  # DB
